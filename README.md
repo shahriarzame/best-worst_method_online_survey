@@ -1,3 +1,10 @@
+This is a two-step process. 
+1. First you need to create a spreadsheet and link it with Google Apps Script. This step will make the survey up and running and you can see all the responses in the spreadsheet.
+2. Next, you need to customize your survey according to your needs.
+
+Hopefully everything is detailed here:
+
+
 # Step 1: Generate your Google Apps Script — Survey Response Handler
 
 This Google Apps Script is deployed as a **Web App** and serves as the backend endpoint for collecting and storing survey responses submitted from a web-based survey frontend.
