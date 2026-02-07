@@ -1,4 +1,59 @@
-# Survey Editing Guide
+# Step 1: Generate your Google Apps Script — Survey Response Handler
+
+This Google Apps Script is deployed as a **Web App** and serves as the backend endpoint for collecting and storing survey responses submitted from a web-based survey frontend.
+
+---
+
+## Output Sheets
+
+Survey responses are written into the following Google Sheets (schemaVersion ≥ 2):
+
+- **`Responses_Meta`**  
+  Submission-level metadata (submission ID, timestamp, survey ID, survey version, respondent metadata).
+
+- **`Responses_Sections`**  
+  Section-level responses (section key, item IDs, most/least selections).
+
+- **`Responses_Comparisons`**  
+  Pairwise / Best–Worst / comparison-scale responses.
+
+---
+
+## Deployment Instructions
+
+1. Open **Google Sheets**  
+   https://sheets.google.com  
+   Create or open the target spreadsheet.
+
+2. Open the Apps Script editor  
+   `Extensions → Apps Script`
+
+3. Paste the **ENTIRE contents** of **`google_apps_script.js`** into the Apps Script editor, then click **Save**.
+
+
+4. Deploy as a Web App  
+   - Click **Deploy → New deployment**
+   - Deployment type: **Web app**
+
+5. Configure deployment  
+   - **Execute as:** Me  
+   - **Who has access:** Anyone
+
+6. Deploy  
+   - Click **Deploy**
+   - Copy the generated **Web App URL**
+
+7. Connect the frontend  
+   Paste the URL into the survey editor code (e.g. `survey_app.js`):
+
+   ```js
+   const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/XXXX/exec";
+
+
+
+
+
+# Step 2: Customize your the Survey
 
 This guide explains how to modify the survey content in `survey_app.js` to customize your survey questions, categories, and settings.
 
@@ -467,23 +522,4 @@ Copy and customize this template for a new section:
 ```
 
 ---
-
-## Deployment Checklist
-
-Before deploying your edited survey:
-
-- [ ] All section keys are unique
-- [ ] All item IDs within each section are unique
-- [ ] No spaces in any IDs
-- [ ] Updated `surveyVersion` number
-- [ ] All required fields are present
-- [ ] Tested locally in browser
-- [ ] Checked browser console for errors
-- [ ] Completed a full test response
-- [ ] Verified data appears correctly in Google Sheet
-- [ ] Updated introduction text and contact info
-- [ ] Updated or removed framework image if needed
-
----
-
-**Good luck with your survey! 🎯**
+Contact: shahriar.zame@tum.de for any queries.
