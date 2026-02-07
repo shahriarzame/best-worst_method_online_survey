@@ -1,3 +1,5 @@
+First fork this repo. Then update the following:
+
 This is a two-step process. 
 1. First you need to create a spreadsheet and link it with Google Apps Script. This step will make the survey up and running and you can see all the responses in the spreadsheet.
 2. Next, you need to customize your survey according to your needs.
@@ -529,4 +531,37 @@ Copy and customize this template for a new section:
 ```
 
 ---
+
+
+# Steps to Deploy on GitHub:
+
+1. Have Your Code updated and pushed to GitHub
+
+2. Enable GitHub Pages
+- Go to your repository on GitHub
+- Click Settings (top menu)
+- Scroll down to Pages (in the left sidebar)
+- Under Source, select GitHub Actions (instead of "Deploy from a branch")
+3. Create GitHub Actions Workflow
+
+
+In your repository on GitHub:
+- Go to the Actions tab
+- Click New workflow
+- Search for "Static HTML" or "Pages"
+- Click Configure on the "Static HTML" workflow template
+  
+GitHub will create a file at .github/workflows/static.yml.
+
+4. Commit the Workflow
+Commit this file directly on GitHub
+The deployment will start automatically
+
+6. Access Your Site
+After deployment completes (check the Actions tab)
+Your site will be available at: https://yourusername.github.io/repository-name/
+
+
+
+
 Contact: shahriar.zame@tum.de for any queries.
