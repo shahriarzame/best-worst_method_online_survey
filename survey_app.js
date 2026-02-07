@@ -1,5 +1,5 @@
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbw8WxV5vv6RZV2IJxim6dVHvGgvwGz29CI4O_9NXEghRKqkx7xcbKCaOirlb4iTu4B4/exec";
+  "https://script.google.com/macros/s/AKfycbwQY8QgnAWkv4uwrh4ZwFX2d9GE9UWlEWTa9xLfIl9BaEYcYHSu4FDoDNW5eXLVnBjU/exec";
 
 const SURVEY_SCHEMA = {
   schemaVersion: 2,
