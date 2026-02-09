@@ -283,7 +283,7 @@ function sectionHtml(section, idx) {
     )
     .join("");
   return `
-  <div class="page-content" id="page-${page}">
+  <div class="page-content" id="page-${page}" style="display:none;">
     <div class="section" id="section-${key}">
       <div class="section-header"><h2 style="margin:0; color:white;">${escapeHtml(section.title)}</h2></div>
       <div class="question-block" id="${key}-q1-block"><div class="question-number">Question 1</div><div class="question-text">Which is the <span class="highlight-most">Most challenging</span> barrier among ${escapeHtml(
